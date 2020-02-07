@@ -175,6 +175,9 @@ bindsym $mod+Shift+comma move workspace to output left
 # Go To Sleep
 bindsym $mod+Shift+p exec systemctl suspend
 
+# Lock Computer
+bindsym $mod+c exec --no-startup-id i3lock -c 000000
+
 exec --no-startup-id nm-applet
 exec --no-startup-id pasystray
 exec --no-startup-id blueman-applet
@@ -202,3 +205,6 @@ mode "move" {
 
 # set background back to black
 exec --no-startup-id 'hsetroot -solid #0000'
+
+# set xautolock
+exec --no-startup-id xautolock -time 3 -locker 'i3lock -c 000000'
